@@ -4,14 +4,9 @@
 
 @mkdir tmp
 
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL ../others/lua-5.3.2/src/*.c
+@cl /MD /O2 /c /DLUA_BUILD_AS_DLL;_WINDOWS;LUA_USE_WINDOWS /I../others/lua-5.3.2/src ../others/lua-5.3.2/src/*.c ../others/slua/*.c  ../luaclib-src/*.c
 @if errorlevel 1 goto :BAD
-
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I../others/lua-5.3.2/src ../others/slua/*.c
-@if errorlevel 1 goto :BAD
-
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I../others/lua-5.3.2/src ../luaclib-src/*.c
-@if errorlevel 1 goto :BAD
+ 
 
 
 @del lua.obj
@@ -22,8 +17,7 @@
 @link /DLL /OUT:slua.dll tmp/*.obj
 @if errorlevel 1 goto :BAD
 
-@del slua.exp
-@del slua.lib
+@if exist tmp rmdir /q /s tmp
 
 @goto :END
 

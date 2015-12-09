@@ -239,6 +239,18 @@ static uint32_t RHs[16] = {
 		 SB1[ (T >> 24) & 0x3F ];			   \
 }
 
+#if !defined(l_rand)		/* { */
+#if defined(LUA_USE_POSIX)
+#define l_rand()	random()
+#define l_srand(x)	srandom(x)
+#define L_RANDMAX	2147483647	/* (2^31 - 1), following POSIX */
+#else
+#define l_rand()	rand()
+#define l_srand(x)	srand(x)
+#define L_RANDMAX	RAND_MAX
+#endif
+#endif				/* } */
+
 /* DES key schedule */
 
 static void 
@@ -340,7 +352,7 @@ lrandomkey(lua_State *L) {
 	int i;
 	char x = 0;
 	for (i=0;i<8;i++) {
-		tmp[i] = random() & 0xff;
+		tmp[i] = l_rand() & 0xff;
 		x ^= tmp[i];
 	}
 	if (x==0) {
@@ -885,7 +897,7 @@ int lhmac_sha1(lua_State *L);
 int
 luaopen_crypt(lua_State *L) {
 	luaL_checkversion(L);
-	srandom(time(NULL));
+	l_srand(time(NULL));
 	luaL_Reg l[] = {
 		{ "hashkey", lhashkey },
 		{ "randomkey", lrandomkey },

@@ -16,15 +16,15 @@
 @cd ..
 @move /Y Win\slua.dll build\x86
 
-call "%ENV64%"
-echo Swtich to x64 build env
-cd Win
-call msvcbuild_cl.bat
-if not exist slua.dll goto builderror
-cd ..
-move /Y Win\slua.dll build\x64
+@call "%ENV64%"
+@echo Swtich to x64 build env
+@cd Win
+@call msvcbuild_cl.bat
+@if not exist slua.dll goto builderror
+@cd ..
+@move /Y Win\slua.dll build\x64
  
-goto :end
+@goto :end
 
 :builderror
 @echo.
