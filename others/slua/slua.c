@@ -45,7 +45,8 @@
 static const luaL_Reg s_lib_preload[] = {
 	// { "lpeg", luaopen_lpeg },
 	// { "pb",    luaopen_pb }, // any 3rd lualibs added here
-		{ NULL, NULL }
+	//	{ NULL, NULL }
+	{	"crypt",luaopen_crypt	}
 };
 
 #if LUA_VERSION_NUM >= 503
