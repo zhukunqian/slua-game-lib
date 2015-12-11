@@ -4,7 +4,7 @@
 
 @mkdir tmp
 
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I"../others/lua-5.3.2/src" ../others/lua-5.3.2/src/*.c ../others/slua/*.c
+@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I"../others/lua-5.3.2/src" ../others/lua-5.3.2/src/*.c ../others/slua/*.c ../luaclib-src/*.c
 @if errorlevel 1 goto :BAD
  
 
