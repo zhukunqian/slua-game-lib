@@ -42,11 +42,14 @@
 #include <math.h>
 #endif
 
+ int luaopen_crypt(lua_State *L);
+
 static const luaL_Reg s_lib_preload[] = {
 	// { "lpeg", luaopen_lpeg },
 	// { "pb",    luaopen_pb }, // any 3rd lualibs added here
-	//	{ NULL, NULL }
-	{	"crypt",luaopen_crypt	}
+	  {	"crypt",luaopen_crypt	},
+		{ NULL, NULL }
+	 
 };
 
 #if LUA_VERSION_NUM >= 503
