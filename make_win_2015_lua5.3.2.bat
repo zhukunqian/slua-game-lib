@@ -10,19 +10,19 @@
 
 @call "%ENV32%"
 @echo Swtich to x86 build env
-@cd Win
+@cd Makefile
 @call msvcbuild_cl_lua5.3.2.bat
 @if not exist slua.dll goto builderror
 @cd ..
-@move /Y Win\slua.dll build\x86
+@move /Y Makefile\slua.dll build\x86
 
 @call "%ENV64%"
 @echo Swtich to x64 build env
-@cd Win
+@cd Makefile
 @call msvcbuild_cl_lua5.3.2.bat
 @if not exist slua.dll goto builderror
 @cd ..
-@move /Y Win\slua.dll build\x64
+@move /Y Makefile\slua.dll build\x64
  
 @goto :end
 
