@@ -1,7 +1,7 @@
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := slua
+LOCAL_MODULE := lua_5_3_2
 LOCAL_CFLAGS := -DLUA_USE_C89
 LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../others/lua-5.3.2/src
@@ -41,10 +41,11 @@ LOCAL_SRC_FILES :=	../../others/lua-5.3.2/src/lapi.c \
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := cry
+LOCAL_MODULE := slua
 LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
-			../../luaclib-src/lua-crypt.c
-LOCAL_SHARED_LIBRARIES := slua
+			../../luaclib-src/lua-crypt.c \
+			../../others/slua/slua.c
+LOCAL_STATIC_LIBRARIES := lua_5_3_2
 
 include $(BUILD_SHARED_LIBRARY)
