@@ -42,7 +42,7 @@
 #include <math.h>
 #endif
 
- int luaopen_crypt(lua_State *L);
+int luaopen_crypt(lua_State *L);
 
 static const luaL_Reg s_lib_preload[] = {
 	// { "lpeg", luaopen_lpeg },

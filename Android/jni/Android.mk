@@ -38,14 +38,16 @@ LOCAL_SRC_FILES :=	../../others/lua-5.3.2/src/lapi.c \
 			../../others/lua-5.3.2/src/lutf8lib.c \
 			../../others/lua-5.3.2/src/loadlib.c \
 			../../others/lua-5.3.2/src/linit.c
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := slua
+LOCAL_FORCE_STATIC_EXECUTABLE := true
+LOCAL_CFLAGS := -DLUA_USE_C89
 LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_STATIC_LIBRARIES := lua_5_3_2
+LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2
 
 include $(BUILD_SHARED_LIBRARY)

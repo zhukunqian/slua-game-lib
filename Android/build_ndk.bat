@@ -4,7 +4,7 @@
 
 @%NDK%/ndk-build.cmd clean
 
-@pause
+pause
 
 @%NDK%/ndk-build.cmd
 
