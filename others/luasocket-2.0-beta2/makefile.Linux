@@ -1,0 +1,74 @@
+LV=2.0
+MV=1.0
+
+LUAC=luac
+BIN2C=bin2c
+CC=gcc
+OPT=-O2  
+DEF = -DLUASOCKET_DEBUG #-Dsocklen_t=int
+
+LOBJS= \
+	luasocket.o \
+	timeout.o \
+	buffer.o \
+	io.o \
+	auxiliar.o \
+	except.o \
+	select.o \
+	options.o \
+	inet.o \
+	tcp.o \
+	udp.o \
+	usocket.o 
+
+MOBJS= \
+	mime.o 
+
+CFLAGS=-I../../include $(PROF) $(OPT) $(DBG) $(DEF) -pedantic -W -Wall 
+
+LDYN=luasocket.so.$(LV)
+
+MDYN=mime.so.$(MV)
+
+all: $(LDYN) $(MDYN)
+
+$(LDYN): $(LOBJS)
+	gcc -shared -o $(LDYN) $(LOBJS)
+
+$(MDYN): $(MOBJS)
+	gcc -shared -o $(MDYN) $(MOBJS)
+
+# dependencies
+auxiliar.o: auxiliar.c auxiliar.h
+buffer.o: buffer.c buffer.h io.h timeout.h
+except.o: except.c except.h
+inet.o: inet.c inet.h socket.h io.h usocket.h timeout.h
+io.o: io.c io.h
+luasocket.o: luasocket.c luasocket.h auxiliar.h except.h timeout.h \
+  buffer.h io.h inet.h socket.h usocket.h tcp.h udp.h select.h
+mime.o: mime.c mime.h
+options.o: options.c auxiliar.h options.h socket.h io.h usocket.h \
+  timeout.h inet.h
+select.o: select.c socket.h io.h usocket.h timeout.h select.h
+tcp.o: tcp.c auxiliar.h socket.h io.h usocket.h timeout.h inet.h \
+  options.h tcp.h buffer.h
+timeout.o: timeout.c luasocket.h auxiliar.h timeout.h
+udp.o: udp.c auxiliar.h socket.h io.h usocket.h timeout.h inet.h \
+  options.h udp.h
+usocket.o: usocket.c socket.h io.h usocket.h timeout.h
+wsocket.o: wsocket.c socket.h io.h usocket.h timeout.h
+
+.SUFFIXES: .lua .lch .lc
+
+.lua.lc:
+	$(LUAC) -o $@ $<
+
+.lc.lch:
+	$(BIN2C) $< > $@
+
+clean:
+	rm -f lua.o
+	rm -f $(LOBJS) $(MOBJS) $(SOBJS)
+	rm -f $(MDYN) $(LDYN) $(SDYN)
+	rm -f *.lc
+	rm -f *.lch

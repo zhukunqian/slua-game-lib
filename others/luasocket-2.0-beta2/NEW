@@ -1,0 +1,31 @@
+What's New
+
+Changes in the 2.0-beta2 were mostly bug-fixes.
+
+<> Fixed silly last-minute-change bug in HTTP/SMTP running;
+<> usocket.c/wsocket.c look nicer thanks to Mike;
+<> Finally total timeout is reliable on Windows! (found a pretty
+   simple work around);
+<> UDP has a reasonable maximum datagram size (8k);
+<> Receive accepts the prefix optional argument (good for
+    non-blocking);
+<> <b>Send doesn't support multiple arguments anymore</b>;
+<> Instead, send allows the selection of the substring
+   to be sent (good for non-blocking);
+<> Fixed bug that caused select return tables not to be associative
+   on windows;
+<> Should compiles with g++;
+<> New sample unix domain support;
+<> New sample LPD support;
+<> Comprehensive error messages;
+<> New getstats and setstats methods to help
+   throttling;
+<> Listen defaults to 32 backlog;
+<> SMTP/FTP/HTTP fail gracefully;
+<> accept/connect/select interrupt safe
+<> Fixed bug that didn't set accepted sockets as non-blocking
+<> <b>New timming functions sleep and gettime have 
+   higher resolution and no wrap around problems</b>;
+<> Bug fixes in the manual;
+<> Fixed bug of missing cast in getfd.
+
