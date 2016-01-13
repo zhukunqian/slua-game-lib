@@ -41,6 +41,18 @@ LOCAL_SRC_FILES :=	../../others/lua-5.3.2/src/lapi.c \
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := lpeg
+LOCAL_CFLAGS := -DLUA_USE_C89
+LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../others/lpeg-1.0.0
+LOCAL_SRC_FILES :=	../../others/lpeg-1.0.0/lpcap.c \
+			../../others/lpeg-1.0.0/lpcode.c \
+			../../others/lpeg-1.0.0/lpprint.c \
+			../../others/lpeg-1.0.0/lptree.c \
+			../../others/lpeg-1.0.0/lpvm.c
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := slua
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_CFLAGS := -DLUA_USE_C89
@@ -48,6 +60,6 @@ LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2
+LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg
 
 include $(BUILD_SHARED_LIBRARY)
