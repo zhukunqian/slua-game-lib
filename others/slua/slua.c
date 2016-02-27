@@ -44,9 +44,11 @@
 
 int luaopen_crypt(lua_State *L);
 int luaopen_sproto_core(lua_State *L);
+int luaopen_lpeg(lua_State *L);
 static const luaL_Reg s_lib_preload[] = {
 	// { "lpeg", luaopen_lpeg },
 	// { "pb",    luaopen_pb }, // any 3rd lualibs added here
+	   { "lpeg", luaopen_lpeg },
 	   { "crypt",luaopen_crypt	},
 	   { "sproto.core",luaopen_sproto_core },
 		{ NULL, NULL }

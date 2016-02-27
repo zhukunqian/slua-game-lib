@@ -4,7 +4,7 @@
 
 @mkdir tmp
 
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I"../others/lua-5.3.2/src" ../others/lua-5.3.2/src/*.c ../others/slua/*.c ../others/sproto/*.c ../luaclib-src/*.c 
+@cl /MD /O2 /c /DLUA_BUILD_AS_DLL /I"../others/lua-5.3.2/src" ../others/lua-5.3.2/src/*.c ../others/slua/*.c ../others/sproto/*.c ../others/lpeg-1.0.0/*.c ../luaclib-src/*.c 
 @if errorlevel 1 goto :BAD
 
 @if exist lua.obj @del lua.obj
