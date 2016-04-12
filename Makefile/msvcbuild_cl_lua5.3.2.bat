@@ -4,12 +4,24 @@
 
 @mkdir tmp
 
-@cl /MD /O2 /c /DLUA_BUILD_AS_DLL ^
+@cl /MD /O2 /c /DLUA_BUILD_AS_DLL;LUASOCKET_API=__declspec(dllexport);_CRT_SECURE_NO_WARNINGS ^
 	/I"../others/lua-5.3.2/src" ^
 	../others/lua-5.3.2/src/*.c ^
 	../others/slua/*.c ^
 	../others/sproto/*.c ^
 	../others/lpeg-1.0.0/*.c ^
+	../others/luasocket/src/auxiliar.c ^
+	../others/luasocket/src/buffer.c ^
+	../others/luasocket/src/except.c ^
+	../others/luasocket/src/inet.c ^
+	../others/luasocket/src/io.c ^
+	../others/luasocket/src/luasocket.c ^
+	../others/luasocket/src/options.c ^
+	../others/luasocket/src/select.c ^
+	../others/luasocket/src/tcp.c ^
+	../others/luasocket/src/timeout.c ^
+	../others/luasocket/src/udp.c ^
+	../others/luasocket/src/wsocket.c ^
 	../luaclib-src/*.c 
 @if errorlevel 1 goto :BAD
 
@@ -18,7 +30,7 @@
 
 @for %%i in (*.obj) do @move %%i tmp/
 
-@link /DLL /OUT:slua.dll tmp/*.obj
+@link /DLL /OUT:slua.dll tmp/*.obj ws2_32.lib
 @if errorlevel 1 goto :BAD
 
 @if exist tmp rmdir /q /s tmp
