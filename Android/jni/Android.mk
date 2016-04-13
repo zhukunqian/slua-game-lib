@@ -44,12 +44,21 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := lpeg
 LOCAL_CFLAGS := -DLUA_USE_C89
 LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../others/lpeg-1.0.0
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/lpeg-1.0.0 $(LOCAL_PATH)/../../others/lua-5.3.2/src
 LOCAL_SRC_FILES :=	../../others/lpeg-1.0.0/lpcap.c \
 			../../others/lpeg-1.0.0/lpcode.c \
 			../../others/lpeg-1.0.0/lpprint.c \
 			../../others/lpeg-1.0.0/lptree.c \
 			../../others/lpeg-1.0.0/lpvm.c
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := sproto
+LOCAL_CFLAGS := -DLUA_USE_C89
+LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/sproto $(LOCAL_PATH)/../../others/lua-5.3.2/src
+LOCAL_SRC_FILES :=	../../others/sproto/lsproto.c \
+			../../others/sproto/sproto.c  
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -60,6 +69,6 @@ LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg
+LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg sproto
 
 include $(BUILD_SHARED_LIBRARY)
