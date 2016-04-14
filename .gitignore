@@ -1,2 +1,5 @@
 iOS/slua/build/
 MacOSX/slua/build/
+build/slua.bundle.dSYM/
+iOS/slua/.DS_Store
+iOS/slua/slua.xcodeproj/project.xcworkspace/xcshareddata/
