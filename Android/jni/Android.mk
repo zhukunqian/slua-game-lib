@@ -62,6 +62,27 @@ LOCAL_SRC_FILES :=	../../others/sproto/lsproto.c \
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := luasocket
+LOCAL_CFLAGS := -DLUA_USE_C89
+LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/luasocket/src $(LOCAL_PATH)/../../others/lua-5.3.2/src
+LOCAL_SRC_FILES :=	../../others/luasocket/src/auxiliar.c \
+			../../others/luasocket/src/buffer.c \
+			../../others/luasocket/src/except.c \
+			../../others/luasocket/src/inet.c \
+			../../others/luasocket/src/io.c \
+			../../others/luasocket/src/luasocket.c \
+			../../others/luasocket/src/options.c \
+			../../others/luasocket/src/select.c \
+			../../others/luasocket/src/tcp.c \
+			../../others/luasocket/src/timeout.c \
+			../../others/luasocket/src/udp.c \
+			../../others/luasocket/src/compat.c \
+			../../others/luasocket/src/usocket.c
+
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := slua
 LOCAL_FORCE_STATIC_EXECUTABLE := true
 LOCAL_CFLAGS := -DLUA_USE_C89
@@ -69,6 +90,6 @@ LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
 LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg sproto
+LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg sproto luasocket
 
 include $(BUILD_SHARED_LIBRARY)

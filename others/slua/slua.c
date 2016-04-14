@@ -50,7 +50,7 @@ static const luaL_Reg s_lib_preload[] = {
 	   { "lpeg", luaopen_lpeg },
 	   { "crypt",luaopen_crypt	},
 	   { "sproto.core",luaopen_sproto_core },
-	  // { "socket.core",luaopen_socket_core },
+	   { "socket.core",luaopen_socket_core },
 		{ NULL, NULL }
 	 
 };
