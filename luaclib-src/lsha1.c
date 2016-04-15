@@ -241,8 +241,8 @@ static void sat_SHA1_Final(SHA1_CTX* context, uint8_t digest[SHA1_DIGEST_SIZE])
 	memset(finalcount, 0, 8);	/* SWR */
 }
 
-#include <lua.h>
-#include <lauxlib.h>
+#include "lua.h"
+#include "lauxlib.h"
 
 int
 lsha1(lua_State *L) {

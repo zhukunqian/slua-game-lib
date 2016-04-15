@@ -1,0 +1,170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		AD71F1531CBF72DD007CE098 /* HISTORY */ = {isa = PBXFileReference; lastKnownFileType = text; path = HISTORY; sourceTree = "<group>"; };
+		AD71F1541CBF72DD007CE098 /* lpcap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lpcap.c; sourceTree = "<group>"; };
+		AD71F1551CBF72DD007CE098 /* lpcap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lpcap.h; sourceTree = "<group>"; };
+		AD71F1561CBF72DD007CE098 /* lpcode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lpcode.c; sourceTree = "<group>"; };
+		AD71F1571CBF72DD007CE098 /* lpcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lpcode.h; sourceTree = "<group>"; };
+		AD71F1581CBF72DD007CE098 /* lpeg-128.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "lpeg-128.gif"; sourceTree = "<group>"; };
+		AD71F1591CBF72DD007CE098 /* lpeg.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = lpeg.html; sourceTree = "<group>"; };
+		AD71F15A1CBF72DD007CE098 /* lpprint.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lpprint.c; sourceTree = "<group>"; };
+		AD71F15B1CBF72DD007CE098 /* lpprint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lpprint.h; sourceTree = "<group>"; };
+		AD71F15C1CBF72DD007CE098 /* lptree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lptree.c; sourceTree = "<group>"; };
+		AD71F15D1CBF72DD007CE098 /* lptree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lptree.h; sourceTree = "<group>"; };
+		AD71F15E1CBF72DD007CE098 /* lptypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lptypes.h; sourceTree = "<group>"; };
+		AD71F15F1CBF72DD007CE098 /* lpvm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lpvm.c; sourceTree = "<group>"; };
+		AD71F1601CBF72DD007CE098 /* lpvm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lpvm.h; sourceTree = "<group>"; };
+		AD71F1611CBF72DD007CE098 /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		AD71F1621CBF72DD007CE098 /* re.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = re.html; sourceTree = "<group>"; };
+		AD71F1631CBF72DD007CE098 /* re.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = re.lua; sourceTree = "<group>"; };
+		AD71F1641CBF72DD007CE098 /* test.lua */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.lua; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		AD71F14D1CBF72DD007CE098 = {
+			isa = PBXGroup;
+			children = (
+				AD71F1531CBF72DD007CE098 /* HISTORY */,
+				AD71F1541CBF72DD007CE098 /* lpcap.c */,
+				AD71F1551CBF72DD007CE098 /* lpcap.h */,
+				AD71F1561CBF72DD007CE098 /* lpcode.c */,
+				AD71F1571CBF72DD007CE098 /* lpcode.h */,
+				AD71F1581CBF72DD007CE098 /* lpeg-128.gif */,
+				AD71F1591CBF72DD007CE098 /* lpeg.html */,
+				AD71F15A1CBF72DD007CE098 /* lpprint.c */,
+				AD71F15B1CBF72DD007CE098 /* lpprint.h */,
+				AD71F15C1CBF72DD007CE098 /* lptree.c */,
+				AD71F15D1CBF72DD007CE098 /* lptree.h */,
+				AD71F15E1CBF72DD007CE098 /* lptypes.h */,
+				AD71F15F1CBF72DD007CE098 /* lpvm.c */,
+				AD71F1601CBF72DD007CE098 /* lpvm.h */,
+				AD71F1611CBF72DD007CE098 /* makefile */,
+				AD71F1621CBF72DD007CE098 /* re.html */,
+				AD71F1631CBF72DD007CE098 /* re.lua */,
+				AD71F1641CBF72DD007CE098 /* test.lua */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		AD71F1521CBF72DD007CE098 /* lpeg-1.0.0 */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = AD71F1651CBF72DD007CE098 /* Build configuration list for PBXLegacyTarget "lpeg-1.0.0" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "/Users/sanx/Documents/u3d-workdspace_5.0/slua-game-lib/others/lpeg-1.0.0";
+			dependencies = (
+			);
+			name = "lpeg-1.0.0";
+			passBuildSettingsInEnvironment = 1;
+			productName = "lpeg-1.0.0";
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		AD71F14E1CBF72DD007CE098 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = AD71F1511CBF72DD007CE098 /* Build configuration list for PBXProject "lpeg-1.0.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD71F14D1CBF72DD007CE098;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD71F1521CBF72DD007CE098 /* lpeg-1.0.0 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		AD71F14F1CBF72DD007CE098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		AD71F1501CBF72DD007CE098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		AD71F1661CBF72DD007CE098 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "lpeg-1.0.0";
+			};
+			name = Debug;
+		};
+		AD71F1671CBF72DD007CE098 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "lpeg-1.0.0";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD71F1511CBF72DD007CE098 /* Build configuration list for PBXProject "lpeg-1.0.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD71F14F1CBF72DD007CE098 /* Debug */,
+				AD71F1501CBF72DD007CE098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD71F1651CBF72DD007CE098 /* Build configuration list for PBXLegacyTarget "lpeg-1.0.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD71F1661CBF72DD007CE098 /* Debug */,
+				AD71F1671CBF72DD007CE098 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD71F14E1CBF72DD007CE098 /* Project object */;
+}
