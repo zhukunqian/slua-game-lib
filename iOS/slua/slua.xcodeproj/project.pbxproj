@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD0DC8B71C3511F40094AE9C /* slua.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC8B61C3511F40094AE9C /* slua.c */; };
 		AD0DC8F31C3512230094AE9C /* lapi.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC8B91C3512230094AE9C /* lapi.c */; };
 		AD0DC8F41C3512230094AE9C /* lauxlib.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC8BB1C3512230094AE9C /* lauxlib.c */; };
 		AD0DC8F51C3512230094AE9C /* lbaselib.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC8BD1C3512230094AE9C /* lbaselib.c */; };
