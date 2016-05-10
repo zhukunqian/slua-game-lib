@@ -1,9 +1,10 @@
 
 @echo on
-@set NDK=D:\android-ndk-r10d
+@set NDK=D:\android-ndk-r10e
 
 
-%NDK%\ndk-build
+@%NDK%\ndk-build
+
 
 
 
