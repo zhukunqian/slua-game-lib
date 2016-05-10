@@ -1,11 +1,18 @@
 LOCAL_PATH := $(call my-dir)
 
+GAME_CFLAGS = -O2 -ffast-math
+
+ifeq ($(TARGET_ARCH_ABI),armeabi-v7a)
+	GAME_CFLAGS = -O2 -ffast-math -mfloat-abi=softfp
+else
+	GAME_CFLAGS = -O2 -ffast-math 
+endif
+
 include $(CLEAR_VARS)
 LOCAL_MODULE := lua_5_3_2
-LOCAL_CFLAGS := -DLUA_USE_C89
-LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
-LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../others/lua-5.3.2/src
-LOCAL_SRC_FILES :=	../../others/lua-5.3.2/src/lapi.c \
+LOCAL_CFLAGS += ${GAME_CFLAGS} -D"lua_getlocaledecpoint()=('.')"
+LOCAL_EXPORT_C_INCLUDES += $(LOCAL_PATH)/../../others/lua-5.3.2/src
+LOCAL_SRC_FILES +=	../../others/lua-5.3.2/src/lapi.c \
 			../../others/lua-5.3.2/src/lcode.c \
 			../../others/lua-5.3.2/src/lctype.c \
 			../../others/lua-5.3.2/src/ldebug.c \
@@ -42,8 +49,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := lpeg
-LOCAL_CFLAGS := -DLUA_USE_C89
-LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_CFLAGS += ${GAME_CFLAGS}
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/lpeg-1.0.0 $(LOCAL_PATH)/../../others/lua-5.3.2/src
 LOCAL_SRC_FILES :=	../../others/lpeg-1.0.0/lpcap.c \
 			../../others/lpeg-1.0.0/lpcode.c \
@@ -54,8 +60,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := sproto
-LOCAL_CFLAGS := -DLUA_USE_C89
-LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_CFLAGS += ${GAME_CFLAGS}
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/sproto $(LOCAL_PATH)/../../others/lua-5.3.2/src
 LOCAL_SRC_FILES :=	../../others/sproto/lsproto.c \
 			../../others/sproto/sproto.c  
@@ -63,8 +68,7 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := luasocket
-LOCAL_CFLAGS := -DLUA_USE_C89
-LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
+LOCAL_CFLAGS += ${GAME_CFLAGS}
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/luasocket/src $(LOCAL_PATH)/../../others/lua-5.3.2/src
 LOCAL_SRC_FILES :=	../../others/luasocket/src/auxiliar.c \
 			../../others/luasocket/src/buffer.c \
@@ -84,12 +88,10 @@ include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := slua
-LOCAL_FORCE_STATIC_EXECUTABLE := true
-LOCAL_CFLAGS := -DLUA_USE_C89
-LOCAL_CPPFLAGS := -O2 -ffast-math -mfloat-abi=softfp
-LOCAL_SRC_FILES := 	../../luaclib-src/lsha1.c \
+LOCAL_CFLAGS += ${GAME_CFLAGS}
+LOCAL_SRC_FILES += 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_WHOLE_STATIC_LIBRARIES := lua_5_3_2 lpeg sproto luasocket
+LOCAL_WHOLE_STATIC_LIBRARIES += lua_5_3_2 lpeg sproto luasocket
 
 include $(BUILD_SHARED_LIBRARY)
