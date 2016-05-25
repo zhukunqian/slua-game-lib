@@ -86,11 +86,20 @@ LOCAL_SRC_FILES :=	../../others/luasocket/src/auxiliar.c \
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE := luacjson
+LOCAL_CFLAGS += ${GAME_CFLAGS}
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../others/lua-cjson-2.1.0 $(LOCAL_PATH)/../../others/lua-5.3.2/src
+LOCAL_SRC_FILES :=	../../others/lua-cjson-2.1.0/lua_cjson.c \
+			../../others/lua-cjson-2.1.0/strbuf.c \
+			../../others/lua-cjson-2.1.0/fpconv.c
+include $(BUILD_STATIC_LIBRARY)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := slua
 LOCAL_CFLAGS += ${GAME_CFLAGS}
 LOCAL_SRC_FILES += 	../../luaclib-src/lsha1.c \
 			../../luaclib-src/lua-crypt.c \
 			../../others/slua/slua.c
-LOCAL_WHOLE_STATIC_LIBRARIES += lua_5_3_2 lpeg sproto luasocket
+LOCAL_WHOLE_STATIC_LIBRARIES += lua_5_3_2 lpeg sproto luasocket luacjson
 
 include $(BUILD_SHARED_LIBRARY)
