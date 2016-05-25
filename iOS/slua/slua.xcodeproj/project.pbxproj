@@ -42,6 +42,11 @@
 		AD0DC9131C3512230094AE9C /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC8F11C3512230094AE9C /* lzio.c */; };
 		AD0DC9171C3512490094AE9C /* lsha1.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC9151C3512490094AE9C /* lsha1.c */; };
 		AD0DC9181C3512490094AE9C /* lua-crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = AD0DC9161C3512490094AE9C /* lua-crypt.c */; };
+		AD4594BF1CF57CD300842DC2 /* fpconv.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4594BA1CF57CD300842DC2 /* fpconv.c */; };
+		AD4594C01CF57CD300842DC2 /* lua_cjson.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4594BC1CF57CD300842DC2 /* lua_cjson.c */; };
+		AD4594C11CF57CD300842DC2 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4594BD1CF57CD300842DC2 /* strbuf.c */; };
+		AD4594C61CF57D0B00842DC2 /* lsproto.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4594C21CF57D0B00842DC2 /* lsproto.c */; };
+		AD4594C71CF57D0B00842DC2 /* sproto.c in Sources */ = {isa = PBXBuildFile; fileRef = AD4594C41CF57D0B00842DC2 /* sproto.c */; };
 		ADE9B4891CBF77A200266938 /* lpcap.c in Sources */ = {isa = PBXBuildFile; fileRef = ADE9B47E1CBF77A200266938 /* lpcap.c */; };
 		ADE9B48A1CBF77A200266938 /* lpcode.c in Sources */ = {isa = PBXBuildFile; fileRef = ADE9B4801CBF77A200266938 /* lpcode.c */; };
 		ADE9B48B1CBF77A200266938 /* lpprint.c in Sources */ = {isa = PBXBuildFile; fileRef = ADE9B4821CBF77A200266938 /* lpprint.c */; };
@@ -137,6 +142,15 @@
 		AD0DC8F21C3512230094AE9C /* lzio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lzio.h; path = "../../others/lua-5.3.2/src/lzio.h"; sourceTree = "<group>"; };
 		AD0DC9151C3512490094AE9C /* lsha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lsha1.c; path = "../../luaclib-src/lsha1.c"; sourceTree = "<group>"; };
 		AD0DC9161C3512490094AE9C /* lua-crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "lua-crypt.c"; path = "../../luaclib-src/lua-crypt.c"; sourceTree = "<group>"; };
+		AD4594BA1CF57CD300842DC2 /* fpconv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fpconv.c; path = "../../others/lua-cjson-2.1.0/fpconv.c"; sourceTree = "<group>"; };
+		AD4594BB1CF57CD300842DC2 /* fpconv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fpconv.h; path = "../../others/lua-cjson-2.1.0/fpconv.h"; sourceTree = "<group>"; };
+		AD4594BC1CF57CD300842DC2 /* lua_cjson.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lua_cjson.c; path = "../../others/lua-cjson-2.1.0/lua_cjson.c"; sourceTree = "<group>"; };
+		AD4594BD1CF57CD300842DC2 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = strbuf.c; path = "../../others/lua-cjson-2.1.0/strbuf.c"; sourceTree = "<group>"; };
+		AD4594BE1CF57CD300842DC2 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = strbuf.h; path = "../../others/lua-cjson-2.1.0/strbuf.h"; sourceTree = "<group>"; };
+		AD4594C21CF57D0B00842DC2 /* lsproto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lsproto.c; path = ../../others/sproto/lsproto.c; sourceTree = "<group>"; };
+		AD4594C31CF57D0B00842DC2 /* msvcint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = msvcint.h; path = ../../others/sproto/msvcint.h; sourceTree = "<group>"; };
+		AD4594C41CF57D0B00842DC2 /* sproto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sproto.c; path = ../../others/sproto/sproto.c; sourceTree = "<group>"; };
+		AD4594C51CF57D0B00842DC2 /* sproto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sproto.h; path = ../../others/sproto/sproto.h; sourceTree = "<group>"; };
 		ADE9B47E1CBF77A200266938 /* lpcap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpcap.c; path = "../../others/lpeg-1.0.0/lpcap.c"; sourceTree = "<group>"; };
 		ADE9B47F1CBF77A200266938 /* lpcap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lpcap.h; path = "../../others/lpeg-1.0.0/lpcap.h"; sourceTree = "<group>"; };
 		ADE9B4801CBF77A200266938 /* lpcode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpcode.c; path = "../../others/lpeg-1.0.0/lpcode.c"; sourceTree = "<group>"; };
@@ -192,6 +206,8 @@
 		AD0DC8A11C3511DC0094AE9C = {
 			isa = PBXGroup;
 			children = (
+				AD5D79781CF551F300BD5B74 /* luacjson */,
+				AD5D796A1CC4989200BD5B74 /* sproto */,
 				ADE9B47D1CBF777100266938 /* lpeg-1.0.0 */,
 				ADE9B47C1CBF776C00266938 /* luasocket */,
 				AD0DC9141C3512290094AE9C /* luaclib-src */,
@@ -290,6 +306,29 @@
 				AD0DC9161C3512490094AE9C /* lua-crypt.c */,
 			);
 			name = "luaclib-src";
+			sourceTree = "<group>";
+		};
+		AD5D796A1CC4989200BD5B74 /* sproto */ = {
+			isa = PBXGroup;
+			children = (
+				AD4594C21CF57D0B00842DC2 /* lsproto.c */,
+				AD4594C31CF57D0B00842DC2 /* msvcint.h */,
+				AD4594C41CF57D0B00842DC2 /* sproto.c */,
+				AD4594C51CF57D0B00842DC2 /* sproto.h */,
+			);
+			name = sproto;
+			sourceTree = "<group>";
+		};
+		AD5D79781CF551F300BD5B74 /* luacjson */ = {
+			isa = PBXGroup;
+			children = (
+				AD4594BA1CF57CD300842DC2 /* fpconv.c */,
+				AD4594BB1CF57CD300842DC2 /* fpconv.h */,
+				AD4594BC1CF57CD300842DC2 /* lua_cjson.c */,
+				AD4594BD1CF57CD300842DC2 /* strbuf.c */,
+				AD4594BE1CF57CD300842DC2 /* strbuf.h */,
+			);
+			name = luacjson;
 			sourceTree = "<group>";
 		};
 		ADE9B47C1CBF776C00266938 /* luasocket */ = {
@@ -406,6 +445,7 @@
 				AD0DC8FC1C3512230094AE9C /* ldo.c in Sources */,
 				AD0DC9101C3512230094AE9C /* lundump.c in Sources */,
 				AD0DC9081C3512230094AE9C /* loslib.c in Sources */,
+				AD4594C01CF57CD300842DC2 /* lua_cjson.c in Sources */,
 				ADE9B4AE1CBF781F00266938 /* luasocket.c in Sources */,
 				AD0DC9111C3512230094AE9C /* lutf8lib.c in Sources */,
 				AD0DC90A1C3512230094AE9C /* lstate.c in Sources */,
@@ -425,6 +465,8 @@
 				AD0DC9001C3512230094AE9C /* linit.c in Sources */,
 				ADE9B4B41CBF781F00266938 /* usocket.c in Sources */,
 				AD0DC90D1C3512230094AE9C /* ltable.c in Sources */,
+				AD4594C61CF57D0B00842DC2 /* lsproto.c in Sources */,
+				AD4594C11CF57CD300842DC2 /* strbuf.c in Sources */,
 				ADE9B4B21CBF781F00266938 /* timeout.c in Sources */,
 				AD0DC9011C3512230094AE9C /* liolib.c in Sources */,
 				ADE9B4B71CBF7C2000266938 /* slua.c in Sources */,
@@ -448,9 +490,11 @@
 				AD0DC9091C3512230094AE9C /* lparser.c in Sources */,
 				AD0DC8F61C3512230094AE9C /* lbitlib.c in Sources */,
 				AD0DC9051C3512230094AE9C /* loadlib.c in Sources */,
+				AD4594BF1CF57CD300842DC2 /* fpconv.c in Sources */,
 				ADE9B48A1CBF77A200266938 /* lpcode.c in Sources */,
 				AD0DC9131C3512230094AE9C /* lzio.c in Sources */,
 				ADE9B4B11CBF781F00266938 /* tcp.c in Sources */,
+				AD4594C71CF57D0B00842DC2 /* sproto.c in Sources */,
 				AD0DC8F41C3512230094AE9C /* lauxlib.c in Sources */,
 				AD0DC9041C3512230094AE9C /* lmem.c in Sources */,
 			);
@@ -463,8 +507,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -481,7 +525,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -499,7 +543,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -510,8 +554,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -528,7 +572,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -540,7 +584,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -550,6 +594,7 @@
 		AD0DC8B41C3511DC0094AE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -559,6 +604,7 @@
 		AD0DC8B51C3511DC0094AE9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
