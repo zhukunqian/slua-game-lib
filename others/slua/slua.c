@@ -46,11 +46,13 @@ int luaopen_crypt(lua_State *L);
 int luaopen_sproto_core(lua_State *L);
 int luaopen_lpeg(lua_State *L);
 int luaopen_socket_core(lua_State *L);
+int luaopen_cjson(lua_State *L);
 static const luaL_Reg s_lib_preload[] = {
 		{ "lpeg", luaopen_lpeg },
 		{ "crypt",luaopen_crypt	},
 	    { "sproto.core",luaopen_sproto_core },
 	    { "socket.core",luaopen_socket_core },
+		{ "cjson",luaopen_cjson },
 		{ NULL, NULL }
 	 
 };

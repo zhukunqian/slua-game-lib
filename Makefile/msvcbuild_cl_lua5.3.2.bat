@@ -22,6 +22,9 @@
 	../others/luasocket/src/timeout.c ^
 	../others/luasocket/src/udp.c ^
 	../others/luasocket/src/wsocket.c ^
+	../others/lua-cjson-2.1.0/lua_cjson.c ^
+	../others/lua-cjson-2.1.0/strbuf.c ^
+	../others/lua-cjson-2.1.0/fpconv.c ^
 	../luaclib-src/*.c 
 @if errorlevel 1 goto :BAD
 

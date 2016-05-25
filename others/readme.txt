@@ -1,0 +1,1 @@
+lua-cjson-2.1.0 github:https://github.com/cloudwu/lua-cjson compatible with lua5.3.2

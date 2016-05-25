@@ -83,7 +83,6 @@ LOCAL_SRC_FILES :=	../../others/luasocket/src/auxiliar.c \
 			../../others/luasocket/src/udp.c \
 			../../others/luasocket/src/compat.c \
 			../../others/luasocket/src/usocket.c
-
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
