@@ -15,6 +15,8 @@ test on win7,android,macosx,ios
 	
 2、And add LUA_5_3 to unity Scripting Define Symbols
 
-生成的库如何在slua中使用
+# 生成的库如何在slua中使用
+
 1、初始化luaService时指定 LSF_EXTLIB参数
+
 2、在unity中的Build Setting中添加编译参数：LUA_5_3
