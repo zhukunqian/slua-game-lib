@@ -1,8 +1,14 @@
-﻿# slua-game-lib
+# slua-game-lib
 
 Add third c lib for slua
 
-add lpeg sproto luasocket luacjson lua5.3.2 for slua
+add lpeg sproto luasocket luacjson lua5.3.4 for slua
+
+	lua5.3.4
+	lpeg-1.0.0
+	lua-cjson-2.1.0
+	luasocket
+	slua-1.3.1
 
 test on win7,android,macosx,ios
 
