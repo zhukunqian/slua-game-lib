@@ -27,12 +27,18 @@
 #define MT_Q	4
 #define MT_COLOR	5
 
+#ifndef LUA_LIB
 #define LUA_LIB
+#endif
 
 #include "lua.h"
 #include "lauxlib.h"
 #include <stdio.h>
 #include <string.h>
+
+
+
+#define luajit_c
 
 #ifdef _WIN32
 #include <float.h>
